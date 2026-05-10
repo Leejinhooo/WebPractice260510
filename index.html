@@ -183,6 +183,7 @@ ko">
 
 
     <section class="card">
+      <p id ="preview"></p>
       <form>
         <input type="text" placeholder="이름" />
         <input type="email" placeholder="이메일" /><br />
@@ -240,7 +241,14 @@ ko">
       alert(nameInput.value, emailInput.value)
       alert(`name : ${nameInput.value} \n email : ${emailInput.value}`)
     })
+    const preview = document.getElementById('preview')
+    nameInput.addEventListener('input', function(){
+      preview.innerText = nameInput.value
+    })
 
+    ul.addEventListener('click', function(e){
+      e.target.remove()
+    })
 
 
 
